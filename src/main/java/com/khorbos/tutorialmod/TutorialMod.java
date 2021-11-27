@@ -1,6 +1,8 @@
 package com.khorbos.tutorialmod;
 
+import com.khorbos.tutorialmod.init.ItemInit;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -16,11 +18,15 @@ public class TutorialMod
     public static final String ID = "tutorialmod";
 
     private static final Logger LOGGER = LogManager.getLogger();
-
+    public static TutorialMod instance;
     public TutorialMod() {
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        modEventBus.addListener(this::setup);
+        modEventBus.addListener(this::doClientStuff);
 
+        ItemInit.ITEMS.register(modEventBus);
+
+        instance = this;
         MinecraftForge.EVENT_BUS.register(this);
     }
 
