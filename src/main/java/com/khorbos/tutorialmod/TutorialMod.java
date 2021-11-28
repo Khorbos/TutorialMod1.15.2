@@ -2,6 +2,7 @@ package com.khorbos.tutorialmod;
 
 import com.khorbos.tutorialmod.init.BlockInit;
 import com.khorbos.tutorialmod.init.ItemInit;
+import com.khorbos.tutorialmod.world.gen.TutorialOreGen;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -14,6 +15,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -60,6 +62,11 @@ public class TutorialMod
             registry.register(blockItem);
         });
         LOGGER.debug("Registered BlockItems passed!");
+    }
+
+    @SubscribeEvent
+    public static void loadCompleteEvent(FMLLoadCompleteEvent event){
+        TutorialOreGen.generateOre();
     }
 
     public static class TutorialItemGroup extends ItemGroup {
