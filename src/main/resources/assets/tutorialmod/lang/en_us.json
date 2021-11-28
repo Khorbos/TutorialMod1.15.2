@@ -1,8 +1,8 @@
 {
-	"item.tutorialmod.example_item": "Example Item"
-	"item.tutorialmod.edible_item": "Edible Item"
-	"item.tutorialmod.edible_meat_item": "Edible Meat Item"
-	"item.tutorialmod.edible_effect_item": "Edible Effect Item"
-	"block.tutorialmod.example_block": "Example Block"
+	"item.tutorialmod.example_item": "Example Item",
+	"item.tutorialmod.edible_item": "Edible Item",
+	"item.tutorialmod.edible_meat_item": "Edible Meat Item",
+	"item.tutorialmod.edible_effect_item": "Edible Effect Item",
+	"block.tutorialmod.example_block": "Example Block",
 	"itemGroup.tutorialtab": "Tutorial"
 }
