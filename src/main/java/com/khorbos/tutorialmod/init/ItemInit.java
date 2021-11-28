@@ -2,6 +2,7 @@ package com.khorbos.tutorialmod.init;
 
 import com.khorbos.tutorialmod.TutorialMod;
 import com.khorbos.tutorialmod.TutorialMod.TutorialItemGroup;
+import com.khorbos.tutorialmod.objects.items.SpecialItem;
 import com.khorbos.tutorialmod.util.enums.ModItemTier;
 import net.minecraft.item.*;
 import net.minecraft.potion.EffectInstance;
@@ -23,4 +24,7 @@ public class ItemInit {
     public static final RegistryObject<Item> EXAMPLE_AXE = ITEMS.register("example_axe", () -> new AxeItem(ModItemTier.EXAMPLE, 11, 3.0F, new Item.Properties().group(TutorialItemGroup.instance)));
     public static final RegistryObject<Item> EXAMPLE_SHOVEL = ITEMS.register("example_shovel", () -> new ShovelItem(ModItemTier.EXAMPLE, 2, 5.0F, new Item.Properties().group(TutorialItemGroup.instance)));
     public static final RegistryObject<Item> EXAMPLE_HOE = ITEMS.register("example_hoe", () -> new HoeItem(ModItemTier.EXAMPLE, 5.0F, new Item.Properties().group(TutorialItemGroup.instance)));
+
+    public static final RegistryObject<SpecialItem> SPECIAL_ITEM = ITEMS.register("special_item", SpecialItem::new);
+
 }

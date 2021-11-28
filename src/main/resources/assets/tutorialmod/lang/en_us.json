@@ -8,6 +8,7 @@
 	"item.tutorialmod.example_axe": "Example Axe",
 	"item.tutorialmod.example_shovel": "Example Shovel",
 	"item.tutorialmod.example_hoe": "Example Hoe",
+	"item.tutorialmod.special_item": "Special Item",
 	"block.tutorialmod.example_block": "Example Block",
 	"itemGroup.tutorialtab": "Tutorial"
 }
