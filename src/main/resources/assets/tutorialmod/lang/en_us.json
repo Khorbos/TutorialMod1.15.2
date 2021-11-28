@@ -9,6 +9,10 @@
 	"item.tutorialmod.example_shovel": "Example Shovel",
 	"item.tutorialmod.example_hoe": "Example Hoe",
 	"item.tutorialmod.special_item": "Special Item",
+	"item.tutorialmod.example_helmet": "Example Helmet",
+	"item.tutorialmod.example_chestplate": "Example Chestplate",
+	"item.tutorialmod.example_leggings": "Example Leggings",
+	"item.tutorialmod.example_boots": "Example Boots",
 	"block.tutorialmod.example_block": "Example Block",
 	"itemGroup.tutorialtab": "Tutorial"
 }
