@@ -5,6 +5,7 @@ import com.khorbos.tutorialmod.init.ItemInit;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -53,11 +54,23 @@ public class TutorialMod
         final IForgeRegistry<Item> registry = event.getRegistry();
 
         BlockInit.BLOCKS.getEntries().stream().map(RegistryObject::get).forEach(block -> {
-            final Item.Properties properties = new Item.Properties().group(ItemGroup.MISC);
+            final Item.Properties properties = new Item.Properties().group(TutorialItemGroup.instance);
             final BlockItem blockItem = new BlockItem(block, properties);
             blockItem.setRegistryName(Objects.requireNonNull(block.getRegistryName()));
             registry.register(blockItem);
         });
         LOGGER.debug("Registered BlockItems passed!");
+    }
+
+    public static class TutorialItemGroup extends ItemGroup {
+        public static final TutorialItemGroup instance = new TutorialItemGroup(ItemGroup.GROUPS.length, "tutorialtab");
+        private TutorialItemGroup(int index, String label) {
+            super(index, label);
+        }
+
+        @Override
+        public ItemStack createIcon() {
+            return new ItemStack(BlockInit.EXAMPLE_BLOCK.get());
+        }
     }
 }
