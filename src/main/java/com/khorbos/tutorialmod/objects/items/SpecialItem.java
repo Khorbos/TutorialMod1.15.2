@@ -36,7 +36,7 @@ public class SpecialItem extends Item {
         if (KeyboardHelper.isHoldingShift()){
             tooltip.add(new StringTextComponent("When holding shift, this item has a tooltip information"));
         } else {
-            tooltip.add(new StringTextComponent("Hold" + "\u00A7e" + "SHIFT" + "\u00A77" + "for more details"));
+            tooltip.add(new StringTextComponent("Hold" + "\u00A7e" + " SHIFT " + "\u00A77" + "for more details"));
         }
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
