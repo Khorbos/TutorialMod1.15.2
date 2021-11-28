@@ -3,6 +3,11 @@
 	"item.tutorialmod.edible_item": "Edible Item",
 	"item.tutorialmod.edible_meat_item": "Edible Meat Item",
 	"item.tutorialmod.edible_effect_item": "Edible Effect Item",
+	"item.tutorialmod.example_sword": "Example Sword",
+	"item.tutorialmod.example_pickaxe": "Example Pickaxe",
+	"item.tutorialmod.example_axe": "Example Axe",
+	"item.tutorialmod.example_shovel": "Example Shovel",
+	"item.tutorialmod.example_hoe": "Example Hoe",
 	"block.tutorialmod.example_block": "Example Block",
 	"itemGroup.tutorialtab": "Tutorial"
 }
