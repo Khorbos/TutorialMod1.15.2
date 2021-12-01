@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "tutorialmod:custom_block"
+  },
+  "result": "minecraft:smithing_table",
+  "experience": 0,
+  "cookingtime": 50
+}
