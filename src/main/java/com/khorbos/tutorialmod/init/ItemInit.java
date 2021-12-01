@@ -2,6 +2,7 @@ package com.khorbos.tutorialmod.init;
 
 import com.khorbos.tutorialmod.TutorialMod;
 import com.khorbos.tutorialmod.TutorialMod.TutorialItemGroup;
+import com.khorbos.tutorialmod.objects.items.BatteryItem;
 import com.khorbos.tutorialmod.objects.items.SpecialItem;
 import com.khorbos.tutorialmod.util.enums.ModArmorMaterial;
 import com.khorbos.tutorialmod.util.enums.ModItemTier;
@@ -33,5 +34,6 @@ public class ItemInit {
     public static final RegistryObject<ArmorItem> EXAMPLE_BOOTS = ITEMS.register("example_boots", () -> new ArmorItem(ModArmorMaterial.EXAMPLE, EquipmentSlotType.FEET, new Item.Properties().group(TutorialItemGroup.instance)));
 
     public static final RegistryObject<SpecialItem> SPECIAL_ITEM = ITEMS.register("special_item", SpecialItem::new);
+    public static final RegistryObject<BatteryItem> BATTERY = ITEMS.register("battery", BatteryItem::new);
 
 }
