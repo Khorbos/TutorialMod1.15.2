@@ -2,6 +2,7 @@ package com.khorbos.tutorialmod;
 
 import com.khorbos.tutorialmod.init.BlockInit;
 import com.khorbos.tutorialmod.init.ItemInit;
+import com.khorbos.tutorialmod.init.ModTileEntityTypes;
 import com.khorbos.tutorialmod.world.gen.TutorialOreGen;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -39,7 +40,7 @@ public class TutorialMod
 
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
-
+        ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
     }

@@ -14,6 +14,8 @@ public class NBTHelper {
     public static CompoundNBT toNBT(Object o){
         if (o instanceof ItemStack){
             return writeItemStack((ItemStack) o);
+        } else if (o instanceof QuarryTileEntity){
+            return writeQuarry((QuarryTileEntity) o);
         }
         return null;
     }
@@ -33,6 +35,14 @@ public class NBTHelper {
         compoundNBT.putInt("count", itemStack.getCount());
         compoundNBT.putString("item", itemStack.getItem().getRegistryName().toString());
         compoundNBT.putByte("type", (byte)0);
+        return compoundNBT;
+    }
+
+    private static CompoundNBT writeQuarry(QuarryTileEntity quarryTileEntity){
+        CompoundNBT compoundNBT = new CompoundNBT();
+        compoundNBT.putInt("x", quarryTileEntity.x);
+        compoundNBT.putInt("y", quarryTileEntity.y);
+        compoundNBT.putInt("z", quarryTileEntity.z);
         return compoundNBT;
     }
 
