@@ -17,6 +17,7 @@
 	"block.tutorialmod.example_block": "Example Block",
 	"block.tutorialmod.example_stairs": "Example Stairs",
 	"block.tutorialmod.example_slab": "Example Slab",
+	"block.tutorialmod.example_button": "Example Button",
 	"block.tutorialmod.custom_block": "Custom Block",
 	"itemGroup.tutorialtab": "Tutorial"
 }
