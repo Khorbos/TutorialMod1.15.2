@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "tutorialmod:block/example_slab" },
+    "type=top": { "model": "tutorialmod:block/example_slab_top" },
+    "type=double": { "model": "tutorialmod:block/example_block" }
+  }
+}
