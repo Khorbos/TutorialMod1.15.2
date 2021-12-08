@@ -3,6 +3,7 @@ package com.khorbos.tutorialmod.init;
 import com.khorbos.tutorialmod.TutorialMod;
 import com.khorbos.tutorialmod.objects.blocks.CustomBlock;
 import com.khorbos.tutorialmod.objects.blocks.CustomButton;
+import com.khorbos.tutorialmod.objects.blocks.CustomPressurePlate;
 import com.khorbos.tutorialmod.objects.blocks.QuarryBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.FenceBlock;
@@ -22,6 +23,7 @@ public class BlockInit {
      public static final RegistryObject<Block> EXAMPLE_SLAB = BLOCKS.register("example_slab", () -> new SlabBlock(Block.Properties.create(Material.IRON)));
     public static final RegistryObject<Block> EXAMPLE_FENCE = BLOCKS.register("example_fence", () -> new FenceBlock(Block.Properties.create(Material.IRON, MaterialColor.IRON)));
     public static final RegistryObject<Block> EXAMPLE_BUTTON = BLOCKS.register("example_button", () -> new CustomButton(Block.Properties.create(Material.IRON, MaterialColor.IRON)));
+    public static final RegistryObject<Block> EXAMPLE_PRESSURE_PLATE = BLOCKS.register("example_pressure_plate", () -> new CustomPressurePlate(Block.Properties.create(Material.IRON)));
 
     public static final RegistryObject<CustomBlock> CUSTOM_BLOCK = BLOCKS.register("custom_block", () -> new CustomBlock());
 
