@@ -1,5 +1,6 @@
 package com.khorbos.tutorialmod;
 
+import com.khorbos.tutorialmod.init.BiomeInit;
 import com.khorbos.tutorialmod.init.BlockInit;
 import com.khorbos.tutorialmod.init.ItemInit;
 import com.khorbos.tutorialmod.init.ModTileEntityTypes;
@@ -8,6 +9,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -41,6 +43,7 @@ public class TutorialMod
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
         ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
+        BiomeInit.BIOMES.register(modEventBus);
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -63,6 +66,11 @@ public class TutorialMod
             registry.register(blockItem);
         });
         LOGGER.debug("Registered BlockItems passed!");
+    }
+
+    @SubscribeEvent
+    public static void onRegisterBiome(final RegistryEvent.Register<Biome> event){
+        BiomeInit.registerBiomes();
     }
 
     @SubscribeEvent
