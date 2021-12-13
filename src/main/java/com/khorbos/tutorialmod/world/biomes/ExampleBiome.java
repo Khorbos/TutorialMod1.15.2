@@ -30,7 +30,7 @@ public class ExampleBiome extends Biome {
                 .category(Category.PLAINS)
                 .depth(0.13F)       // How low down or high up the biome is (default is 0.125)
                 .downfall(0.5F)     // How often it rains
-                .parent("plains")   // what parent biome is it (i.e., parent of BambooForest is Jungle)
+                .parent(null)       // what parent biome is it (i.e., parent of BambooForest is Jungle)
         );
     }
 

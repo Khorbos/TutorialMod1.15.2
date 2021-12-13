@@ -1,14 +1,12 @@
 package com.khorbos.tutorialmod;
 
-import com.khorbos.tutorialmod.init.BiomeInit;
-import com.khorbos.tutorialmod.init.BlockInit;
-import com.khorbos.tutorialmod.init.ItemInit;
-import com.khorbos.tutorialmod.init.ModTileEntityTypes;
+import com.khorbos.tutorialmod.init.*;
 import com.khorbos.tutorialmod.world.gen.TutorialOreGen;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -33,8 +31,11 @@ public class TutorialMod
 {
     public static final String ID = "tutorialmod";
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static TutorialMod instance;
+
+    public static ResourceLocation EXAMPLE_DIM_TYPE = new ResourceLocation(ID, "example");
+
     public TutorialMod() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
@@ -44,6 +45,7 @@ public class TutorialMod
         BlockInit.BLOCKS.register(modEventBus);
         ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
         BiomeInit.BIOMES.register(modEventBus);
+        DimensionInit.MOD_DIMENSION.register(modEventBus);
         instance = this;
         MinecraftForge.EVENT_BUS.register(this);
     }
