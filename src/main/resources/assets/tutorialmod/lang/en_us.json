@@ -20,6 +20,8 @@
 	"block.tutorialmod.example_button": "Example Button",
 	"block.tutorialmod.example_pressure_plate": "Example Pressure Plate",
 	"block.tutorialmod.custom_block": "Custom Block",
+	"block.tutorialmod.example_chest": "Example Chest",
 	"itemGroup.tutorialtab": "Tutorial",
-	"biome.tutorialmod.example_biome": "Example Biome"
+	"biome.tutorialmod.example_biome": "Example Biome",
+	"container.example_chest": "Example Chest"
 }

@@ -1,10 +1,8 @@
 package com.khorbos.tutorialmod.init;
 
 import com.khorbos.tutorialmod.TutorialMod;
-import com.khorbos.tutorialmod.objects.blocks.CustomBlock;
-import com.khorbos.tutorialmod.objects.blocks.CustomButton;
-import com.khorbos.tutorialmod.objects.blocks.CustomPressurePlate;
-import com.khorbos.tutorialmod.objects.blocks.QuarryBlock;
+import com.khorbos.tutorialmod.objects.blocks.*;
+import com.khorbos.tutorialmod.tileentity.ExampleChestTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.FenceBlock;
 import net.minecraft.block.SlabBlock;
@@ -28,4 +26,6 @@ public class BlockInit {
     public static final RegistryObject<CustomBlock> CUSTOM_BLOCK = BLOCKS.register("custom_block", () -> new CustomBlock());
 
     public static final RegistryObject<QuarryBlock> QUARRY = BLOCKS.register("quarry", QuarryBlock::new);
+
+    public static final RegistryObject<ExampleChestBlock> EXAMPLE_CHEST = BLOCKS.register("example_chest", ExampleChestBlock::new);
 }
