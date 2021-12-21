@@ -2,8 +2,11 @@ package com.khorbos.tutorialmod.util.forge;
 
 import com.khorbos.tutorialmod.TutorialMod;
 import com.khorbos.tutorialmod.client.gui.ExampleChestScreen;
+import com.khorbos.tutorialmod.init.BlockInit;
 import com.khorbos.tutorialmod.init.ModContainerTypes;
 import net.minecraft.client.gui.ScreenManager;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -15,5 +18,6 @@ public class ClientEventBusSubscriber {
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event){
         ScreenManager.registerFactory(ModContainerTypes.EXAMPLE_CHEST.get(), ExampleChestScreen::new);
+        RenderTypeLookup.setRenderLayer(BlockInit.EXAMPLE_SAPLING.get(), RenderType.getCutout());
     }
 }

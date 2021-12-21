@@ -21,6 +21,10 @@
 	"block.tutorialmod.example_pressure_plate": "Example Pressure Plate",
 	"block.tutorialmod.custom_block": "Custom Block",
 	"block.tutorialmod.example_chest": "Example Chest",
+	"block.tutorialmod.example_log": "Example Log",
+	"block.tutorialmod.example_sapling": "Example Sapling",
+	"block.tutorialmod.example_leaves": "Example Leaves",
+	"block.tutorialmod.example_planks": "Example Planks",
 	"itemGroup.tutorialtab": "Tutorial",
 	"biome.tutorialmod.example_biome": "Example Biome",
 	"container.example_chest": "Example Chest"

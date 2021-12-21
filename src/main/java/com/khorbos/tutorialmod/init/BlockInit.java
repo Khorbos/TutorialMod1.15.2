@@ -3,10 +3,8 @@ package com.khorbos.tutorialmod.init;
 import com.khorbos.tutorialmod.TutorialMod;
 import com.khorbos.tutorialmod.objects.blocks.*;
 import com.khorbos.tutorialmod.tileentity.ExampleChestTileEntity;
-import net.minecraft.block.Block;
-import net.minecraft.block.FenceBlock;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.StairsBlock;
+import com.khorbos.tutorialmod.world.features.ExampleTree;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.fml.RegistryObject;
@@ -24,7 +22,10 @@ public class BlockInit {
     public static final RegistryObject<Block> EXAMPLE_PRESSURE_PLATE = BLOCKS.register("example_pressure_plate", () -> new CustomPressurePlate(Block.Properties.create(Material.IRON)));
 
     public static final RegistryObject<CustomBlock> CUSTOM_BLOCK = BLOCKS.register("custom_block", () -> new CustomBlock());
-
+    public static final RegistryObject<ExampleSaplingBlock> EXAMPLE_SAPLING = BLOCKS.register("example_sapling", () -> new ExampleSaplingBlock(() -> new ExampleTree(), Block.Properties.from(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<LogBlock> EXAMPLE_LOG = BLOCKS.register("example_log", () -> new LogBlock(MaterialColor.WOOD, Block.Properties.from(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> EXAMPLE_PLANKS = BLOCKS.register("example_planks", () -> new Block(Block.Properties.from(BlockInit.EXAMPLE_LOG.get())));
+    public static final RegistryObject<LeavesBlock> EXAMPLE_LEAVES = BLOCKS.register("example_leaves", () -> new LeavesBlock(Block.Properties.from(Blocks.OAK_LEAVES)));
     public static final RegistryObject<QuarryBlock> QUARRY = BLOCKS.register("quarry", QuarryBlock::new);
 
     public static final RegistryObject<ExampleChestBlock> EXAMPLE_CHEST = BLOCKS.register("example_chest", ExampleChestBlock::new);
