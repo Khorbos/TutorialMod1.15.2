@@ -2,6 +2,7 @@ package com.khorbos.tutorialmod;
 
 import com.khorbos.tutorialmod.init.*;
 import com.khorbos.tutorialmod.world.gen.TutorialOreGen;
+import net.minecraft.block.ComposterBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -52,7 +53,13 @@ public class TutorialMod
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event) {}
+    private void setup(final FMLCommonSetupEvent event) {
+        ComposterBlock.registerCompostable(0.3F, BlockInit.EXAMPLE_LEAVES.get());
+        ComposterBlock.registerCompostable(0.3F, BlockInit.EXAMPLE_SAPLING.get());
+        ComposterBlock.registerCompostable(0.65F, ItemInit.EDIBLE_ITEM.get());
+        ComposterBlock.registerCompostable(0.3F, ItemInit.EDIBLE_EFFECT_ITEM.get());
+        ComposterBlock.registerCompostable(0.3F, ItemInit.EDIBLE_MEAT_ITEM.get());
+    }
 
     private void doClientStuff(final FMLClientSetupEvent event) {}
 
