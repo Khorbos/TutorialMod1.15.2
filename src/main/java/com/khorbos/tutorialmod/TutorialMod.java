@@ -45,6 +45,7 @@ public class TutorialMod
         BlockInit.BLOCKS.register(modEventBus);
         ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
         ModContainerTypes.CONTAINER_TYPES.register(modEventBus);
+        ModEntityTypes.ENTITY_TYPES.register(modEventBus);
         BiomeInit.BIOMES.register(modEventBus);
         DimensionInit.MOD_DIMENSION.register(modEventBus);
         instance = this;
