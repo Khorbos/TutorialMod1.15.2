@@ -1,5 +1,6 @@
 package com.khorbos.tutorialmod.init;
 
+import com.electronwill.nightconfig.core.ConfigSpec;
 import com.khorbos.tutorialmod.TutorialMod;
 import com.khorbos.tutorialmod.objects.blocks.*;
 import com.khorbos.tutorialmod.tileentity.ExampleChestTileEntity;
@@ -29,4 +30,5 @@ public class BlockInit {
     public static final RegistryObject<QuarryBlock> QUARRY = BLOCKS.register("quarry", QuarryBlock::new);
 
     public static final RegistryObject<ExampleChestBlock> EXAMPLE_CHEST = BLOCKS.register("example_chest", ExampleChestBlock::new);
+    public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop", () -> new CornCrop(Block.Properties.from(Blocks.WHEAT)));
 }

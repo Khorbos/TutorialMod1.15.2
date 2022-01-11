@@ -23,5 +23,6 @@ public class ClientEventBusSubscriber {
         ScreenManager.registerFactory(ModContainerTypes.EXAMPLE_CHEST.get(), ExampleChestScreen::new);
         RenderTypeLookup.setRenderLayer(BlockInit.EXAMPLE_SAPLING.get(), RenderType.getCutout());
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.EXAMPLE_ENTITY.get(), ExampleEntityRender::new);
+        RenderTypeLookup.setRenderLayer(BlockInit.CORN_CROP.get(), RenderType.getCutout());
     }
 }

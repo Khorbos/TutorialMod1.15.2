@@ -4,6 +4,7 @@ import com.khorbos.tutorialmod.TutorialMod;
 import com.khorbos.tutorialmod.TutorialMod.TutorialItemGroup;
 import com.khorbos.tutorialmod.objects.items.BatteryItem;
 import com.khorbos.tutorialmod.objects.items.SpecialItem;
+import com.khorbos.tutorialmod.objects.items.food.CornItem;
 import com.khorbos.tutorialmod.util.enums.ModArmorMaterial;
 import com.khorbos.tutorialmod.util.enums.ModItemTier;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -35,5 +36,8 @@ public class ItemInit {
 
     public static final RegistryObject<SpecialItem> SPECIAL_ITEM = ITEMS.register("special_item", SpecialItem::new);
     public static final RegistryObject<BatteryItem> BATTERY = ITEMS.register("battery", BatteryItem::new);
+
+    public static final RegistryObject<Item> CORN_SEED = ITEMS.register("corn_seed", () -> new BlockItem(BlockInit.CORN_CROP.get(), new Item.Properties()));
+    public static final RegistryObject<CornItem> CORN = ITEMS.register("corn", CornItem::new);
 
 }
