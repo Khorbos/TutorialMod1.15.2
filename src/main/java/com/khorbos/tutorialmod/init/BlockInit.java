@@ -31,4 +31,6 @@ public class BlockInit {
 
     public static final RegistryObject<ExampleChestBlock> EXAMPLE_CHEST = BLOCKS.register("example_chest", ExampleChestBlock::new);
     public static final RegistryObject<Block> CORN_CROP = BLOCKS.register("corn_crop", () -> new CornCrop(Block.Properties.from(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> EXAMPLE_DOOR = BLOCKS.register("example_door", () -> new CustomDoorBlock(Block.Properties.from(BlockInit.EXAMPLE_PLANKS.get())));
 }
